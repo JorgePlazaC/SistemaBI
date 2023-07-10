@@ -4,7 +4,76 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h2>Ventas por Sucursal</h2>
+    <div id="ventasPorSucursalChart"></div>
 </div>
+
+<div>
+    <h2>Ventas por Categoría</h2>
+    <div id="ventasPorCategoriaChart"></div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawCharts);
+
+        function drawCharts() {
+            // Ventas por Sucursal
+            var ventasPorSucursalData = new google.visualization.DataTable();
+            ventasPorSucursalData.addColumn('string', 'Sucursal');
+            ventasPorSucursalData.addColumn('number', 'Cantidad');
+
+            var ventasPorSucursal = {}; // Diccionario para almacenar las ventas por sucursal
+
+            @foreach (var venta in Model.VentasPorSucursal)
+            {
+                <text>
+                var sucursal = '@venta.Sucursal';
+                var cantidad = parseFloat('@venta.Cantidad');
+                if (ventasPorSucursal.hasOwnProperty(sucursal)) {
+                    ventasPorSucursal[sucursal] += cantidad; // Sumar la cantidad de ventas si la sucursal ya existe en el diccionario
+                } else {
+                    ventasPorSucursal[sucursal] = cantidad; // Agregar la sucursal y la cantidad de ventas al diccionario
+                }
+                </text>
+            }
+
+            for (var sucursal in ventasPorSucursal) {
+                if (ventasPorSucursal.hasOwnProperty(sucursal)) {
+                    ventasPorSucursalData.addRow([sucursal, ventasPorSucursal[sucursal]]);
+                }
+            }
+
+            var ventasPorSucursalOptions = {
+                title: 'Ventas por Sucursal'
+            };
+
+            var ventasPorSucursalChart = new google.visualization.ColumnChart(document.getElementById('ventasPorSucursalChart'));
+            ventasPorSucursalChart.draw(ventasPorSucursalData, ventasPorSucursalOptions);
+
+            // Ventas por Categoría
+            var ventasPorCategoriaData = new google.visualization.DataTable();
+            ventasPorCategoriaData.addColumn('string', 'Categoría');
+            ventasPorCategoriaData.addColumn('number', 'Cantidad');
+
+            @foreach (var venta in Model.VentasPorCategoria)
+            {
+                <text>
+                var cantidad = parseFloat('@venta.Cantidad');
+                ventasPorCategoriaData.addRow(['@venta.Categoria', cantidad]);
+                </text>
+            }
+
+            var ventasPorCategoriaOptions = {
+                title: 'Ventas por Categoría'
+            };
+
+            var ventasPorCategoriaChart = new google.visualization.PieChart(document.getElementById('ventasPorCategoriaChart'));
+            ventasPorCategoriaChart.draw(ventasPorCategoriaData, ventasPorCategoriaOptions);
+        }
+    </script>
+}
+

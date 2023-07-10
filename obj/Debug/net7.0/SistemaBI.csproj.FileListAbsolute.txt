@@ -34,3 +34,40 @@ C:\Users\choch\OneDrive\Documentos\Informatica\Cuarto año\Septimo semestre\Proy
 C:\Users\choch\OneDrive\Documentos\Informatica\Cuarto año\Septimo semestre\Proyecto desarrollo de soluciones\Proyecto2\SistemaBI\bin\Debug\net7.0\Grpc.Net.Client.dll
 C:\Users\choch\OneDrive\Documentos\Informatica\Cuarto año\Septimo semestre\Proyecto desarrollo de soluciones\Proyecto2\SistemaBI\bin\Debug\net7.0\Grpc.Net.Common.dll
 C:\Users\choch\OneDrive\Documentos\Informatica\Cuarto año\Septimo semestre\Proyecto desarrollo de soluciones\Proyecto2\SistemaBI\obj\Debug\net7.0\SistemaBI.csproj.CopyComplete
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\appsettings.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\SistemaBI.staticwebassets.runtime.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\SistemaBI.exe
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\SistemaBI.deps.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\SistemaBI.runtimeconfig.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\SistemaBI.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\SistemaBI.pdb
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.csproj.AssemblyReference.cache
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.AssemblyInfoInputs.cache
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.AssemblyInfo.cs
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.csproj.CoreCompileInputs.cache
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.RazorAssemblyInfo.cache
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.RazorAssemblyInfo.cs
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets\msbuild.SistemaBI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets\msbuild.build.SistemaBI.props
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SistemaBI.props
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.SistemaBI.props
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\scopedcss\bundle\SistemaBI.styles.css
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\scopedcss\projectbundle\SistemaBI.bundle.scp.css
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.csproj.CopyComplete
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\refint\SistemaBI.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.pdb
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\SistemaBI.genruntimeconfig.cache
+C:\Users\Mi PC\Desktop\taller\SistemaBI\obj\Debug\net7.0\ref\SistemaBI.dll
+C:\Users\Mi PC\Desktop\taller\SistemaBI\bin\Debug\net7.0\Newtonsoft.Json.dll

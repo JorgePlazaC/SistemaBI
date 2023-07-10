@@ -31,7 +31,7 @@ Task.Run(async () =>
             // Llamada a RecibirMensajeInventario
             var mensajeReply = await client.RecibirMensajeInventarioAsync(
                 new SolicitudTextoPlano { });
-            Console.WriteLine("Respuesta del servidor: " + mensajeReply.Respuesta);
+            
 
         }
         catch (Exception ex)

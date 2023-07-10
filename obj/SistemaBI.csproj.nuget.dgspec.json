@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\choch\\OneDrive\\Documentos\\Informatica\\Cuarto año\\Septimo semestre\\Proyecto desarrollo de soluciones\\Proyecto2\\SistemaBI\\SistemaBI.csproj": {}
+    "C:\\Users\\Mi PC\\Desktop\\taller\\SistemaBI\\SistemaBI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\choch\\OneDrive\\Documentos\\Informatica\\Cuarto año\\Septimo semestre\\Proyecto desarrollo de soluciones\\Proyecto2\\SistemaBI\\SistemaBI.csproj": {
+    "C:\\Users\\Mi PC\\Desktop\\taller\\SistemaBI\\SistemaBI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\choch\\OneDrive\\Documentos\\Informatica\\Cuarto año\\Septimo semestre\\Proyecto desarrollo de soluciones\\Proyecto2\\SistemaBI\\SistemaBI.csproj",
+        "projectUniqueName": "C:\\Users\\Mi PC\\Desktop\\taller\\SistemaBI\\SistemaBI.csproj",
         "projectName": "SistemaBI",
-        "projectPath": "C:\\Users\\choch\\OneDrive\\Documentos\\Informatica\\Cuarto año\\Septimo semestre\\Proyecto desarrollo de soluciones\\Proyecto2\\SistemaBI\\SistemaBI.csproj",
-        "packagesPath": "C:\\Users\\choch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\choch\\OneDrive\\Documentos\\Informatica\\Cuarto año\\Septimo semestre\\Proyecto desarrollo de soluciones\\Proyecto2\\SistemaBI\\obj\\",
+        "projectPath": "C:\\Users\\Mi PC\\Desktop\\taller\\SistemaBI\\SistemaBI.csproj",
+        "packagesPath": "C:\\Users\\Mi PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mi PC\\Desktop\\taller\\SistemaBI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\choch\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Mi PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,6 +52,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.56.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -75,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
