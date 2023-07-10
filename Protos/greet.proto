@@ -8,6 +8,7 @@ package inventario;
 service InventarioService {
   rpc ObtenerTextoPlano (SolicitudTextoPlano) returns (RespuestaTextoPlano);
   rpc EnviarMensajeWeb (MensajeRequest) returns (MensajeResponse);
+  rpc RecibirMensajeInventario (SolicitudTextoPlano) returns (MensajeResponse); // Nuevo RPC
 }
 
 // Mensaje para solicitar texto plano

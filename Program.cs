@@ -1,6 +1,7 @@
+using System;
 using System.Threading.Tasks;
 using Grpc.Net.Client;
-using Inventario; // Actualiza con el nombre correcto del espacio de nombres gRPC.
+using Inventario; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -21,17 +21,18 @@ if (!app.Environment.IsDevelopment())
 Task.Run(async () =>
 {
     // The port number must match the port of the gRPC server.
-    using var channel = GrpcChannel.ForAddress("http://localhost:5138"); // Asegúrate de que este puerto sea el correcto.
-    var client = new InventarioService.InventarioServiceClient(channel); // Actualizado para usar el cliente correcto.
+    using var channel = GrpcChannel.ForAddress("http://localhost:5138");
+    var client = new InventarioService.InventarioServiceClient(channel); 
 
     while (true) // Bucle infinito
     {
         try
         {
-            // Llamada a EnviarMensajeWeb
-            var mensajeReply = await client.EnviarMensajeWebAsync(
-                new MensajeRequest { Mensaje = "Mensaje desde el sistema web" });
+            // Llamada a RecibirMensajeInventario
+            var mensajeReply = await client.RecibirMensajeInventarioAsync(
+                new SolicitudTextoPlano { });
             Console.WriteLine("Respuesta del servidor: " + mensajeReply.Respuesta);
+
         }
         catch (Exception ex)
         {
