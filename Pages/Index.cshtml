@@ -1,79 +1,58 @@
 ﻿@page
-@model IndexModel
+@model SistemaBI.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div>
-    <h2>Ventas por Sucursal</h2>
-    <div id="ventasPorSucursalChart"></div>
-</div>
-
-<div>
-    <h2>Ventas por Categoría</h2>
-    <div id="ventasPorCategoriaChart"></div>
-</div>
-
-@section Scripts {
+<head>
+    <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script type="text/javascript">
-        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.load('current', { 'packages': ['corechart', 'bar'] });
         google.charts.setOnLoadCallback(drawCharts);
 
         function drawCharts() {
-            // Ventas por Sucursal
-            var ventasPorSucursalData = new google.visualization.DataTable();
-            ventasPorSucursalData.addColumn('string', 'Sucursal');
-            ventasPorSucursalData.addColumn('number', 'Cantidad');
+            drawVentasPorSucursalChart();
+            drawVentasPorCategoriaChart();
+        }
 
-            var ventasPorSucursal = {}; // Diccionario para almacenar las ventas por sucursal
+        function drawVentasPorSucursalChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Sucursal');
+            data.addColumn('number', 'Ventas');
 
-            @foreach (var venta in Model.VentasPorSucursal)
+            @foreach (var venta in Model.ResumenVentasPorSucursal)
             {
                 <text>
-                var sucursal = '@venta.Sucursal';
-                var cantidad = parseFloat('@venta.Cantidad');
-                if (ventasPorSucursal.hasOwnProperty(sucursal)) {
-                    ventasPorSucursal[sucursal] += cantidad; // Sumar la cantidad de ventas si la sucursal ya existe en el diccionario
-                } else {
-                    ventasPorSucursal[sucursal] = cantidad; // Agregar la sucursal y la cantidad de ventas al diccionario
-                }
+                    data.addRow(['@venta.Key', @venta.Value]);
                 </text>
             }
 
-            for (var sucursal in ventasPorSucursal) {
-                if (ventasPorSucursal.hasOwnProperty(sucursal)) {
-                    ventasPorSucursalData.addRow([sucursal, ventasPorSucursal[sucursal]]);
-                }
-            }
+            var options = { 'title': 'Ventas por Sucursal', 'width': 800, 'height': 600 };
+            var chart = new google.visualization.ColumnChart(document.getElementById('ventasPorSucursal_chart_div'));
+            chart.draw(data, options);
+        }
 
-            var ventasPorSucursalOptions = {
-                title: 'Ventas por Sucursal'
-            };
-
-            var ventasPorSucursalChart = new google.visualization.ColumnChart(document.getElementById('ventasPorSucursalChart'));
-            ventasPorSucursalChart.draw(ventasPorSucursalData, ventasPorSucursalOptions);
-
-            // Ventas por Categoría
-            var ventasPorCategoriaData = new google.visualization.DataTable();
-            ventasPorCategoriaData.addColumn('string', 'Categoría');
-            ventasPorCategoriaData.addColumn('number', 'Cantidad');
+        function drawVentasPorCategoriaChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Categoria');
+            data.addColumn('number', 'Ventas');
 
             @foreach (var venta in Model.VentasPorCategoria)
             {
                 <text>
-                var cantidad = parseFloat('@venta.Cantidad');
-                ventasPorCategoriaData.addRow(['@venta.Categoria', cantidad]);
+                    data.addRow(['@venta.Categoria', @venta.Cantidad]);
                 </text>
             }
 
-            var ventasPorCategoriaOptions = {
-                title: 'Ventas por Categoría'
-            };
-
-            var ventasPorCategoriaChart = new google.visualization.PieChart(document.getElementById('ventasPorCategoriaChart'));
-            ventasPorCategoriaChart.draw(ventasPorCategoriaData, ventasPorCategoriaOptions);
+            var options = { 'title': 'Ventas por Categoria', 'width': 800, 'height': 600 };
+            var chart = new google.visualization.PieChart(document.getElementById('ventasPorCategoria_chart_div'));
+            chart.draw(data, options);
         }
     </script>
-}
-
+</head>
+<body>
+    <div id="ventasPorSucursal_chart_div"></div>
+    <div id="ventasPorCategoria_chart_div"></div>
+</body>
